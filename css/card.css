@@ -1,0 +1,151 @@
+.product-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    
+}
+
+.card {
+    max-width: 350px;
+    margin: 0 24px;
+
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--clr-white);
+    
+}
+
+.card__image-mobile {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    background-size: cover;
+}
+
+.card__image-desktop {
+    display: none;
+}
+
+
+.card__details {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card__type {
+    font-family: var(--ff-montserrat);
+    font-weight: 500;
+    font-size: .675rem;
+
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.card__title {
+    font-family: var(--ff-fraunces);
+    font-weight: 700;
+    font-size: 2rem;
+
+    line-height: 32px;
+
+    margin-top: 12px;
+    margin-bottom: 12px;
+
+    width: 280px;
+}
+
+.card__description {
+    color: var(--clr-dark-grayish-blue);
+    font-family: var(--ff-montserrat);
+    line-height: 24px;
+}
+
+.card__price {
+    display: flex;
+    align-items: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    flex-grow: 1;
+}
+
+.card__price-main {
+    color: var(--clr-dark-cyan);
+
+    font-family: var(--ff-fraunces);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-right: 24px;
+}
+
+.card__price-old {
+    color: var(--clr-dark-grayish-blue);
+
+    font-family: var(--ff-montserrat);
+    font-weight: 400;
+    font-size: .875rem;
+    
+    text-decoration: line-through;
+}
+
+.card__cart-button::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    background: url(../images/icon-cart.svg) no-repeat;
+    
+}
+
+.card__cart-button {
+    background-color: var(--clr-dark-cyan);
+    border-radius: 8px;
+    color: var(--clr-white);
+
+    font-family: var(--ff-montserrat);
+    font-size: .775rem;
+    font-weight: 700;
+
+    text-decoration: none;
+    text-align: center;
+    padding: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .card {
+        max-width: 600px;
+        
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card__image-mobile {
+        display: none;
+    }
+
+
+    .card__image-desktop {
+        display: block;
+        height: 450px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .card__title {
+        width: 200px;
+    }
+
+    .card__details {
+        background-color: var(--clr-white);
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        
+    }
+}
